@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Song A",
+      "description": "Compose and refine the hook + verses.",
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "name": "Workshop B",
+      "description": "Prepare slides and hands-on exercises.",
+      "priority": "medium"
+    },
+    {
+      "id": 3,
+      "name": "Daily Tasks",
+      "description": "Email triage, planning, and follow-ups.",
+      "priority": "low"
+    }
+  ],
+  "timeEntries": [],
+  "moodEntries": []
+}

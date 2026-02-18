@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  --bg: #1f2336;
+  --panel: #2a2f45;
+  --panel-light: #343b58;
+  --text: #e9ecff;
+  --muted: #a7b0d6;
+  --accent: #7f86ff;
+  --high: #ff6b81;
+  --medium: #ffd166;
+  --low: #2dd4bf;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #2c3250, #181b2c 45%);
+  color: var(--text);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar { padding: 0.5rem; }
+.subtitle { color: var(--muted); margin-top: -0.5rem; }
+
+.content {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.card {
+  background: rgba(42, 47, 69, 0.86);
+  border: 1px solid rgba(127, 134, 255, 0.24);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 12px 30px rgba(10, 12, 23, 0.45);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stack { display: grid; gap: 0.6rem; }
+.inline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.inline-grid textarea, .inline-grid button { grid-column: 1 / -1; }
+
+input, textarea, select, button {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--panel-light);
+  color: var(--text);
+  padding: 0.65rem 0.8rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  background: linear-gradient(135deg, #6f77ff, #8b5cf6);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.08); }
+
+.project-list, .timeline, .mood-list {
+  display: grid;
+  gap: 0.7rem;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.project-item, .time-item, .mood-item {
+  background: rgba(52, 59, 88, 0.75);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priority-pill {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.priority-high { background: rgba(255, 107, 129, 0.2); color: var(--high); }
+.priority-medium { background: rgba(255, 209, 102, 0.2); color: var(--medium); }
+.priority-low { background: rgba(45, 212, 191, 0.2); color: var(--low); }
+
+.messages { margin: 0; padding-left: 1rem; color: var(--muted); }
+.time-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 980px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .grid-2, .inline-grid { grid-template-columns: 1fr; }
+}
