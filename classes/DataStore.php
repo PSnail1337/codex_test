@@ -60,7 +60,7 @@ class DataStore
         ];
 
         $moods = [
-            (new MoodEntry(date('Y-m-d'), '🔥', 'Feeling focused and ready to ship.'))->toArray(),
+            (new MoodEntry(date('Y-m-d'), date('H:i'), '😂', 'Feeling focused and ready to ship.'))->toArray(),
         ];
 
         $entries = [
