@@ -1,0 +1,56 @@
+{
+    "projects": [
+        {
+            "id": "song-a",
+            "name": "Song A asdf",
+            "description": "Composing + polishing arrangement ideas. lalala",
+            "priority": "high"
+        },
+        {
+            "id": "workshop-b",
+            "name": "Workshop B",
+            "description": "Build slides and hands-on exercises.",
+            "priority": "medium"
+        },
+        {
+            "id": "daily-tasks",
+            "name": "Daily Tasks",
+            "description": "Admin tasks and quick maintenance.",
+            "priority": "low"
+        },
+        {
+            "id": "project_699598ae47eb34.99557636",
+            "name": "asdfasdf",
+            "description": "asdfasdf",
+            "priority": "medium"
+        }
+    ],
+    "moods": [
+        {
+            "date": "2026-02-18",
+            "mood": "\ud83d\udd25",
+            "reflection": "Feeling focused and ready to ship."
+        },
+        {
+            "date": "2026-02-18",
+            "mood": "\ud83d\ude00",
+            "reflection": "test"
+        }
+    ],
+    "entries": [
+        {
+            "projectId": "song-a",
+            "date": "2026-02-18",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "note": "Drafted chorus and bass line."
+        },
+        {
+            "projectId": "workshop-b",
+            "date": "2026-02-18",
+            "startTime": "13:00",
+            "endTime": "15:00",
+            "note": "Updated demo snippets."
+        }
+    ]
+}
