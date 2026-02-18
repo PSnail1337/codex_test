@@ -34,7 +34,21 @@ class DataStore
 
     public function save(array $payload): void
     {
-        file_put_contents($this->path, json_encode($payload, JSON_PRETTY_PRINT));
+        $directory = dirname($this->path);
+
+        if (!is_dir($directory) && !mkdir($directory, 0775, true) && !is_dir($directory)) {
+            throw new RuntimeException("Unable to create data directory: {$directory}");
+        }
+
+        $encoded = json_encode($payload, JSON_PRETTY_PRINT);
+        if ($encoded === false) {
+            throw new RuntimeException('Unable to encode data payload as JSON.');
+        }
+
+        $result = file_put_contents($this->path, $encoded);
+        if ($result === false) {
+            throw new RuntimeException("Unable to write data file: {$this->path}");
+        }
     }
 
     private function seed(): array
