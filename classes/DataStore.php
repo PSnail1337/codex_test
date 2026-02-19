@@ -64,8 +64,8 @@ class DataStore
         ];
 
         $entries = [
-            (new TimeEntry('song-a', date('Y-m-d'), '09:00', '11:30', 'Drafted chorus and bass line.'))->toArray(),
-            (new TimeEntry('workshop-b', date('Y-m-d'), '13:00', '15:00', 'Updated demo snippets.'))->toArray(),
+            (new TimeEntry('entry_song_a', 'song-a', date('Y-m-d'), '09:00', '11:30', 'Drafted chorus and bass line.'))->toArray(),
+            (new TimeEntry('entry_workshop_b', 'workshop-b', date('Y-m-d'), '13:00', '15:00', 'Updated demo snippets.'))->toArray(),
         ];
 
         $seed = [
